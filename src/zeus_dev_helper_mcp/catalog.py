@@ -11,7 +11,7 @@ from typing import Any
 
 import httpx
 
-from zeus_dev_helper_mcp.config import HelperConfig
+from zeus_dev_helper_mcp.config import CHAT_REQUEST_TEMPLATE_REPOS, HelperConfig
 from zeus_dev_helper_mcp.docs_links import docs_url
 
 STAMP_WARNING = (
@@ -106,10 +106,7 @@ def is_template_repo(root: Path | str | None) -> bool:
         return True
     if manifest.get("schema_version"):
         return True
-    return str(manifest.get("repo") or "").strip() in {
-        "koten-ai/zeus_chat_request",
-        "Koten-ai-org/zeus_chat_request",
-    }
+    return str(manifest.get("repo") or "").strip().lower() in CHAT_REQUEST_TEMPLATE_REPOS
 
 
 def empty_template_next_action(*, local_dir: str | None) -> str:

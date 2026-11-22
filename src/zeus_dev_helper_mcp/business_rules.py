@@ -15,7 +15,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from zeus_dev_helper_mcp.checklist import _is_template_repo, bound_app_root
+from zeus_dev_helper_mcp.catalog import is_template_repo
+from zeus_dev_helper_mcp.checklist import bound_app_root
 from zeus_dev_helper_mcp.config import HelperConfig
 from zeus_dev_helper_mcp.env_questions import HOST_FORM
 from zeus_dev_helper_mcp.sample_log import bound_sample_dirs, sample_kind
@@ -430,7 +431,7 @@ def _is_zeus_app(root: Path) -> bool:
         return False
     if not resolved.is_dir() or resolved == _helper_root():
         return False
-    if _is_template_repo(resolved):
+    if is_template_repo(resolved):
         return False
     config = _read_config(resolved / "config.json")
     zeus = config.get("zeus") if isinstance(config, dict) else None

@@ -9,6 +9,14 @@ from pathlib import Path
 
 DEFAULT_DOCS_BRANCH = "zeus-v1.0.0"
 DEFAULT_CHAT_REQUEST_REPO = "Koten-ai-org/zeus_chat_request"
+# Manifests written before the GitHub org move.
+LEGACY_CHAT_REQUEST_REPO = "koten-ai/zeus_chat_request"
+CHAT_REQUEST_TEMPLATE_REPOS = frozenset(
+    {
+        DEFAULT_CHAT_REQUEST_REPO.lower(),
+        LEGACY_CHAT_REQUEST_REPO.lower(),
+    }
+)
 DEFAULT_CHAT_REQUEST_BRANCH = "main"
 DEFAULT_KOTEN_DOCS_REPO = "Koten-ai-org/koten_docs"
 DEFAULT_DOCS_BASE_URL = "https://docs.koten.ai"
