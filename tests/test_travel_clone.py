@@ -259,7 +259,7 @@ def test_foreign_default_directory_clones_the_next_sibling(
     assert out["ok"] is True
     assert out["cloned"] is True
     assert Path(out["local_dir"]).name == "demo_travel_sample-2"
-    assert out["repo"] == "https://github.com/koten-ai/demo_travel_sample"
+    assert out["repo"] == "https://github.com/Koten-ai-org/demo_travel_sample"
     assert TRAVEL_REPO_GIT in seen["cmd"]
     assert "demo_beer_sample" not in " ".join(seen["cmd"])
     assert (foreign / "notes.txt").read_text(encoding="utf-8") == "keep\n"

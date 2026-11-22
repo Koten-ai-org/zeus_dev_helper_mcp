@@ -10,7 +10,7 @@ from __future__ import annotations
 import os
 
 DEFAULT_DOCS_BASE = "https://docs.koten.ai"
-DEFAULT_DOCS_SOURCE = "https://github.com/koten-ai/koten_docs"
+DEFAULT_DOCS_SOURCE = "https://github.com/Koten-ai-org/koten_docs"
 ZEUS_CLIENT_HUB = f"{DEFAULT_DOCS_BASE}/zeus-client"
 
 

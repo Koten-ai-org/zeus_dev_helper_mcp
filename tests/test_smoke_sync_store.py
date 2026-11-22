@@ -42,7 +42,7 @@ def _template(root: Path, *, catalogs: list[dict] | None) -> Path:
         manifest = {
             "profile": "v2_min",
             "schema_version": 2,
-            "repo": "koten-ai/zeus_chat_request",
+            "repo": "Koten-ai-org/zeus_chat_request",
             "catalogs": catalogs,
         }
     (root / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")

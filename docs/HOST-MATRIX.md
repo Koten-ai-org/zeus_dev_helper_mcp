@@ -9,6 +9,7 @@ Local only: tool **ids** in `helper_metrics` / `metrics.jsonl`. No prompts, bodi
 | Grok Build | checkout venv: `…/.venv/bin/python -m zeus_dev_helper_mcp` (see Grok gotchas) | **2026-09-15** (Helper **0.7.0**, `core` **12** tools) | First-green **reached** on `demos/travelapp` with **PyPI `kotenai-zeus-client==2.4.1`** (Paris hotels re-smoke). Checks **1–3 pass**, **4 partial**. `next_step` stayed on 2.2 after platform pass (auth skip). Did **not** call `smoke_test_agent` (ran `python main.py` instead). Prior 2026-09-14: handshake OK, 12 tools, checks 1–4 **not scored**. |
 | Claude Code / Desktop | `mcpServers` JSON, `uvx --from 'zeus-dev-helper-mcp[agent]' zeus-dev-helper-mcp` / venv python with the `agent` extra | | Unmeasured |
 | Cursor | MCP stdio entry, same env | | Unmeasured |
+| ChatGPT | Codex CLI `~/.codex/config.toml` stdio: `uvx --from '<helper checkout>[agent]' zeus-dev-helper-mcp` | **2026-11-17** (Helper **0.7.13**) | **Fail.** Travel create asks again for Zeus URL, auth method, auth user, LLM model, and LLM provider. `set_prereq`, `start_project`, and `use_sample` each elicit. [ZDM-29](https://kotenai.atlassian.net/browse/ZDM-29). |
 
 ## Application-user beer utterance (Grok Build, 2026-09-18)
 
@@ -63,7 +64,7 @@ Config on disk (no secret values): `llm.api_key_env=LLM_API_KEY`, `chat_requests
 
 ### Host / coach gaps (block first-green unless the agent leaves the rails)
 
-These are why “Helper says 2.2” is not the demo’s real next step. Family write-up: `zeus_client_design` [HOW_TO_MAKE_A_CLIENT_LESSON_LEARNED.md](https://github.com/koten-ai/zeus_client_design/blob/main/HOW_TO_MAKE_A_CLIENT_LESSON_LEARNED.md) LL-2026-09-15-001…006.
+These are why “Helper says 2.2” is not the demo’s real next step. Family write-up: `zeus_client_design` [HOW_TO_MAKE_A_CLIENT_LESSON_LEARNED.md](https://github.com/Koten-ai-org/zeus_client_design/blob/main/HOW_TO_MAKE_A_CLIENT_LESSON_LEARNED.md) LL-2026-09-15-001…006.
 
 | Gap | What Grok had to do outside Helper |
 | --- | --- |

@@ -138,7 +138,7 @@ def test_ensure_clones_and_sets_env(tmp_path: Path, monkeypatch) -> None:
     assert out["env"][ENV_YELP_DIR] == str(dest.resolve())
     assert "npm install" in out["next_action"]
     assert "LocalAI" in out["next_action"]
-    assert "github.com/koten-ai/demo_yelp" in out["next_action"]
+    assert "github.com/Koten-ai-org/demo_yelp" in out["next_action"]
     assert "yelp-demo" in out["next_action"]
     saved = json.loads((cfg.state_dir / "yelp_sample.json").read_text(encoding="utf-8"))
     assert saved["yelp_sample_dir"] == str(dest.resolve())
@@ -378,7 +378,7 @@ def test_generated_app_is_not_the_localai_template(tmp_path: Path, monkeypatch) 
     assert out["local_dir"] == str(localai.resolve())
     assert os.environ[ENV_YELP_DIR] == str(localai.resolve())
     assert "LocalAI" in out["next_action"]
-    assert "github.com/koten-ai/demo_yelp" in out["next_action"]
+    assert "github.com/Koten-ai-org/demo_yelp" in out["next_action"]
     assert not (localai / "main.py").exists()
     assert (generated / "main.py").read_text(encoding="utf-8").startswith("print")
     saved = json.loads((cfg.state_dir / "yelp_sample.json").read_text(encoding="utf-8"))

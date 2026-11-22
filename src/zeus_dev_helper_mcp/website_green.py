@@ -110,13 +110,13 @@ def _install_editable(root: Path) -> dict[str, Any]:
         fail_timeout=(
             "pip install -e . did not finish. The checkout pins "
             "kotenai-zeus-client from git tag 0.3.1-alpha and needs git "
-            "access to github.com/koten-ai/zeus_client_python. "
+            "access to github.com/Koten-ai-org/zeus_client_python. "
             "Then call website_green again."
         ),
         fail_exit=(
             "pip install -e . failed. The checkout pins kotenai-zeus-client "
             "from git tag 0.3.1-alpha. That install needs git access to "
-            "github.com/koten-ai/zeus_client_python. Then call website_green again."
+            "github.com/Koten-ai-org/zeus_client_python. Then call website_green again."
         ),
     )
 
@@ -755,7 +755,7 @@ def _run_website_green(
         return _result(
             failure_class="sample_dir_missing",
             next_action=(
-                "use_sample clones https://github.com/koten-ai/demo_beer_sample, "
+                "use_sample clones https://github.com/Koten-ai-org/demo_beer_sample, "
                 "then website_green checks the page."
             ),
         )

@@ -9,7 +9,7 @@ from zeus_dev_helper_mcp.docs_links import docs_url
 from zeus_dev_helper_mcp.surface import recommend_surface
 
 # Source: Zeus docs/public/motions/ZEUS_MOTIONS_GUIDE.md (13 motions).
-MOTIONS_DOC = "https://github.com/koten-ai/Zeus/blob/main/docs/public/motions"
+MOTIONS_DOC = "https://github.com/Koten-ai-org/Zeus/blob/main/docs/public/motions"
 MOTIONS: dict[str, dict[str, Any]] = {
     "funnel": {
         "user_shape": "Help me complete the action.",

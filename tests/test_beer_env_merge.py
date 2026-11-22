@@ -150,7 +150,7 @@ def _assert_coach(out: dict) -> None:
     assert "brewery-card check stays separate" in action
     assert "describe 200 does not mark the page ready" in action
     assert "Do not clone demo_travel_sample." in action
-    assert "https://github.com/koten-ai/demo_beer_sample" in action
+    assert "https://github.com/Koten-ai-org/demo_beer_sample" in action
     assert "python main.py" in action
 
 

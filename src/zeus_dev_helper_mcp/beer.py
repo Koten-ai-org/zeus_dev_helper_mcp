@@ -18,7 +18,7 @@ from zeus_dev_helper_mcp.checklist import set_item_status
 from zeus_dev_helper_mcp.config import HelperConfig
 from zeus_dev_helper_mcp.docs_links import docs_url
 
-BEER_REPO = "https://github.com/koten-ai/demo_beer_sample"
+BEER_REPO = "https://github.com/Koten-ai-org/demo_beer_sample"
 BEER_REPO_GIT = f"{BEER_REPO}.git"
 DEFAULT_BEER_DIR_NAME = "demo_beer_sample"
 ENV_BEER_DIR = "DEMO_BEER_SAMPLE_DIR"
@@ -520,7 +520,7 @@ SAMPLE_BEER = {
     "repo": BEER_REPO,
     "note": (
         "beer-sample catalog UI. use_sample(sample=beer) shallow-clones "
-        "https://github.com/koten-ai/demo_beer_sample when the directory is missing "
+        "https://github.com/Koten-ai-org/demo_beer_sample when the directory is missing "
         "and sets DEMO_BEER_SAMPLE_DIR. The checkout is the app. "
         "Start it with python main.py, as that README describes. "
         "Lists are Direct and need no LLM key. "
@@ -2881,7 +2881,7 @@ def write_beer_sample(
 
 
 def _beer_start_action(root: Path) -> str:
-    """README start for https://github.com/koten-ai/demo_beer_sample."""
+    """README start for https://github.com/Koten-ai-org/demo_beer_sample."""
     from zeus_dev_helper_mcp.python_runtime import launch_note
 
     note = launch_note()

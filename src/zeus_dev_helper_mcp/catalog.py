@@ -22,7 +22,7 @@ STAMP_WARNING = (
 
 ENV_CHAT_REQUEST_DIR = "ZEUS_CHAT_REQUEST_DIR"
 DEFAULT_CHAT_REQUEST_DIR_NAME = "zeus_chat_request"
-DEFAULT_CHAT_REQUEST_REPO_URL = "https://github.com/koten-ai/zeus_chat_request.git"
+DEFAULT_CHAT_REQUEST_REPO_URL = "https://github.com/Koten-ai-org/zeus_chat_request.git"
 
 
 class CatalogError(Exception):
@@ -106,7 +106,10 @@ def is_template_repo(root: Path | str | None) -> bool:
         return True
     if manifest.get("schema_version"):
         return True
-    return str(manifest.get("repo") or "").strip() == "koten-ai/zeus_chat_request"
+    return str(manifest.get("repo") or "").strip() in {
+        "koten-ai/zeus_chat_request",
+        "Koten-ai-org/zeus_chat_request",
+    }
 
 
 def empty_template_next_action(*, local_dir: str | None) -> str:

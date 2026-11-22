@@ -217,10 +217,10 @@ FAILURE_UNSUPPORTED_LANG = "unsupported_coding_language"
 
 SAMPLE_TRAVEL = {
     "name": "demo_travel_sample",
-    "repo": "https://github.com/koten-ai/demo_travel_sample",
+    "repo": "https://github.com/Koten-ai-org/demo_travel_sample",
     "note": "Primary single-agent UI demo (public). use_sample clones when no local path is set.",
     "related": [
-        "https://github.com/koten-ai/zeus_client_python/tree/main/docs/demo-builder",
+        "https://github.com/Koten-ai-org/zeus_client_python/tree/main/docs/demo-builder",
         "https://docs.koten.ai/zeus-client/using-zeus-client",
     ],
 }
@@ -297,7 +297,7 @@ def use_sample(
 ) -> dict[str, Any]:
     """UI sample path: travel clone, beer catalog UI, live-stamp page, or yelp demo clone.
 
-    travel: shallow-clone https://github.com/koten-ai/demo_travel_sample.git when the destination is missing. Optional version: a named tag that exists is cloned exactly; an omitted version or a missing tag uses the latest semver tag; main is used only when that repository has no semver tags. demo_travel_sample, demo_beer_sample, and demo_yelp are tagged 0.1.0. An existing checkout stays in place. The destination is sample_dir, or parent_dir plus project_name. A blank parent is the directory next to this Helper checkout. A foreign default directory moves to the next open sibling. An explicit foreign sample_dir returns foreign_sample_dir and writes nothing. A recorded checkout that answers GET /api/health stays in place. Start with python -m travel_planner on port 5000 unless PORT is set. The create path does not rewrite Docker files. Set DEMO_TRAVEL_SAMPLE_DIR.
+    travel: shallow-clone https://github.com/Koten-ai-org/demo_travel_sample.git when the destination is missing. Optional version: a named tag that exists is cloned exactly; an omitted version or a missing tag uses the latest semver tag; main is used only when that repository has no semver tags. demo_travel_sample, demo_beer_sample, and demo_yelp are tagged 0.1.0. An existing checkout stays in place. The destination is sample_dir, or parent_dir plus project_name. A blank parent is the directory next to this Helper checkout. A foreign default directory moves to the next open sibling. An explicit foreign sample_dir returns foreign_sample_dir and writes nothing. A recorded checkout that answers GET /api/health stays in place. Start with python -m travel_planner on port 5000 unless PORT is set. The create path does not rewrite Docker files. Set DEMO_TRAVEL_SAMPLE_DIR.
     beer: shallow-clone public demo_beer_sample when missing. A named tag that exists is cloned exactly; an omitted version or a missing tag uses the latest semver tag; main is used only when that repository has no semver tags. The repository is tagged 0.1.0. Set DEMO_BEER_SAMPLE_DIR.
     Start that checkout with python main.py (README). Search is run_turn with chat_request omitted.
     When the checkout has both a Dockerfile and a compose file, serve_choice_required
@@ -306,7 +306,7 @@ def use_sample(
     run Docker.
     catalog: write demo_catalog_sample from explain_scope. Beer bucket or Beer + Brewery
     still writes the beer catalog UI.
-    demo_yelp: locate or clone the LocalAI template https://github.com/koten-ai/demo_yelp; set DEMO_YELP_SAMPLE_DIR. Aliases include yelp-demo. A named tag that exists is cloned exactly; an omitted version or a missing tag uses the latest semver tag; main is used only when that repository has no semver tags. The repository is tagged 0.1.0.
+    demo_yelp: locate or clone the LocalAI template https://github.com/Koten-ai-org/demo_yelp; set DEMO_YELP_SAMPLE_DIR. Aliases include yelp-demo. A named tag that exists is cloned exactly; an omitted version or a missing tag uses the latest semver tag; main is used only when that repository has no semver tags. The repository is tagged 0.1.0.
     Bare sample=yelp stays the multi-agent handoff.
     For API-only apps use scaffold_app(app_kind=api).
     """
@@ -415,7 +415,7 @@ def use_sample(
             "local_dir": ensured.get("local_dir") or ensured.get("target_dir"),
             "written": ensured.get("written"),
             "cloned": bool(ensured.get("cloned")),
-            "repo": ensured.get("repo") or "https://github.com/koten-ai/demo_beer_sample",
+            "repo": ensured.get("repo") or "https://github.com/Koten-ai-org/demo_beer_sample",
             "project_name": ensured.get("project_name"),
             "layout": ensured.get("layout"),
             "env": ensured.get("env"),
@@ -501,7 +501,7 @@ def use_sample(
             "app_kind": "ui",
             "note": (
                 "Yelp demo UI. The git checkout at local_dir is the LocalAI template from "
-                "https://github.com/koten-ai/demo_yelp. "
+                "https://github.com/Koten-ai-org/demo_yelp. "
                 "Docker is the preferred elicitation option. "
                 "The other option is both host processes. "
                 "Do not scaffold a replacement and do not copy demo_beer_sample. "
@@ -825,7 +825,7 @@ curl -s -X POST http://127.0.0.1:8000/turn \\
 ## Docs
 
 - https://docs.koten.ai/zeus-client/using-zeus-client
-- https://github.com/koten-ai/zeus_chat_request (min catalog templates)
+- https://github.com/Koten-ai-org/zeus_chat_request (min catalog templates)
 """
         files["requirements.txt"] = (
             f"kotenai-zeus-client>={CLIENT_FLOOR}\n"
@@ -898,7 +898,7 @@ python main.py
 ## Docs
 
 - https://docs.koten.ai/zeus-client/using-zeus-client
-- https://github.com/koten-ai/zeus_chat_request (min catalog templates)
+- https://github.com/Koten-ai-org/zeus_chat_request (min catalog templates)
 """
         files["requirements.txt"] = (
             f"kotenai-zeus-client>={CLIENT_FLOOR}\nhttpx>=0.27.0\npython-dotenv>=1.0.0\n"

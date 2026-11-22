@@ -235,7 +235,10 @@ def _is_template_repo(root: Path) -> bool:
         return True
     if manifest.get("schema_version"):
         return True
-    return str(manifest.get("repo") or "").strip() == "koten-ai/zeus_chat_request"
+    return str(manifest.get("repo") or "").strip() in {
+        "koten-ai/zeus_chat_request",
+        "Koten-ai-org/zeus_chat_request",
+    }
 
 
 def bound_app_root(cfg: HelperConfig) -> Path | None:
