@@ -8,6 +8,7 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
+from zeus_dev_helper_mcp.catalog import is_template_repo
 from zeus_dev_helper_mcp.config import HelperConfig
 from zeus_dev_helper_mcp.docs_links import docs_url
 
@@ -223,21 +224,6 @@ def _read_object(path: Path) -> dict[str, Any]:
     return data if isinstance(data, dict) else {}
 
 
-def _is_template_repo(root: Path) -> bool:
-    """A zeus_chat_request checkout is the template index, not the app store."""
-    if not root.is_dir():
-        return False
-    if (root / "v2").is_dir() and (root / "catalog-index.json").is_file():
-        return True
-    manifest = _read_object(root / "manifest.json")
-    catalogs = manifest.get("catalogs")
-    if isinstance(catalogs, list) and catalogs:
-        return True
-    if manifest.get("schema_version"):
-        return True
-    return str(manifest.get("repo") or "").strip() == "koten-ai/zeus_chat_request"
-
-
 def bound_app_root(cfg: HelperConfig) -> Path | None:
     """Directory recorded for the checklist sample. Does not create state."""
     data = _read_object(cfg.state_dir / "checklist.json")
@@ -270,11 +256,11 @@ def _chat_dir_for_app(root: Path, config: dict[str, Any]) -> Path | None:
         named = Path(raw.strip()).expanduser()
         if not named.is_absolute():
             named = root / named
-    if named is not None and named.is_dir() and not _is_template_repo(named):
+    if named is not None and named.is_dir() and not is_template_repo(named):
         return named
     fallback = root / "data" / "chat_requests"
     has_app = (root / "main.py").is_file() or (root / "pyproject.toml").is_file()
-    if fallback.is_dir() and has_app and not _is_template_repo(fallback):
+    if fallback.is_dir() and has_app and not is_template_repo(fallback):
         return fallback
     return None
 

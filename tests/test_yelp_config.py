@@ -92,7 +92,7 @@ def test_config_is_private_and_omits_the_llm_key(
     assert "zeus.password" in out["app_config"]["fields"]
     pinned = (root / "pyproject.toml").read_text(encoding="utf-8")
     assert "file:../zeus_client_python" not in pinned
-    assert "kotenai-zeus-client @ git+ssh://git@github.com/koten-ai/zeus_client_python.git@0.3.1-alpha" in pinned
+    assert "kotenai-zeus-client @ git+ssh://git@github.com/Koten-ai-org/zeus_client_python.git@0.3.1-alpha" in pinned
     assert pinned.count("kotenai-zeus-client") == 1
 
 

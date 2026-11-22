@@ -5,7 +5,7 @@
 
 **Status:** Implemented (MVP 0.4.x+) — design frozen post-implementation for the board.  
 **Epic:** [ZDH-1](https://kotenai.atlassian.net/browse/ZDH-1)  
-**Repo:** https://github.com/koten-ai/zeus_dev_helper_mcp  
+**Repo:** https://github.com/Koten-ai-org/zeus_dev_helper_mcp  
 **Published docs:** https://docs.koten.ai/zeus-client (live Zeus Client hub; site is public)
 
 ---

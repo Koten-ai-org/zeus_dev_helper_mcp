@@ -112,7 +112,7 @@ TOPICS: dict[str, dict[str, str]] = {
             "a chat_request."
         ),
         "doc": "zeus-client/glossary.md#motion",
-        "external": "https://github.com/koten-ai/Zeus/blob/main/docs/public/motions/ZEUS_MOTIONS_GUIDE.md",
+        "external": "https://github.com/Koten-ai-org/Zeus/blob/main/docs/public/motions/ZEUS_MOTIONS_GUIDE.md",
     },
     "single_agent": {
         "summary": "One middle-man agent loop to first green. Helper MVP track before multi-agent graduation.",
@@ -137,7 +137,7 @@ TOPICS: dict[str, dict[str, str]] = {
     "zeus_chat_request": {
         "summary": "Published V2 min chat_request templates for clients/MCP/demos (not stamped for your cluster).",
         "doc": "zeus-client/contracts-and-catalog.md",
-        "external": "https://github.com/koten-ai/zeus_chat_request",
+        "external": "https://github.com/Koten-ai-org/zeus_chat_request",
     },
     "data_plane_mcp": {
         "summary": "Future scope-bound Explore/Verify MCP after first app is green. Helper only recommends/handoffs.",
@@ -215,7 +215,7 @@ TOPICS: dict[str, dict[str, str]] = {
             "Do not default it for beer-sample / website / no-LLM utterances."
         ),
         "doc": "zeus-client/using-zeus-client.md",
-        "external": "https://github.com/koten-ai/demo_travel_sample",
+        "external": "https://github.com/Koten-ai-org/demo_travel_sample",
     },
     "demo_beer_sample": {
         "summary": (
@@ -229,7 +229,7 @@ TOPICS: dict[str, dict[str, str]] = {
             "config.json llm.api_key_env stays that name. has_llm_key=true does not count. "
             "Two source types stay in that one chat. Do not write a job for this page. "
             "The BFF does not build a pipeline body. "
-            "use_sample(sample=beer) shallow-clones https://github.com/koten-ai/demo_beer_sample "
+            "use_sample(sample=beer) shallow-clones https://github.com/Koten-ai-org/demo_beer_sample "
             "when it is missing and sets DEMO_BEER_SAMPLE_DIR. "
             "Start that checkout with python main.py. "
             "When it has both a Dockerfile and a compose file, follow host_question "
@@ -241,7 +241,7 @@ TOPICS: dict[str, dict[str, str]] = {
     },
     "demo_yelp": {
         "summary": (
-            "demo_yelp is the LocalAI yelp-demo UI template from https://github.com/koten-ai/demo_yelp. "
+            "demo_yelp is the LocalAI yelp-demo UI template from https://github.com/Koten-ai-org/demo_yelp. "
             "use_sample(sample=demo_yelp) locates or shallow-clones that repository and sets "
             "DEMO_YELP_SAMPLE_DIR. When parent_dir is set, the clone is created there. "
             "Docker is the preferred yelp-demo elicitation option and is guide-only: "
@@ -267,7 +267,7 @@ TOPICS: dict[str, dict[str, str]] = {
             "Do not clone demo_travel_sample on this path."
         ),
         "doc": "zeus-client/using-zeus-client.md",
-        "external": "https://github.com/koten-ai/demo_yelp",
+        "external": "https://github.com/Koten-ai-org/demo_yelp",
     },
     "typeahead": {
         "summary": (

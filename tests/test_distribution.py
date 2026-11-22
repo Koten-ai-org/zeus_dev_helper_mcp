@@ -33,7 +33,7 @@ def test_server_json_pypi_package() -> None:
     server = _server()
     assert server["name"] == MCP_NAME
     assert 1 <= len(server["description"]) <= 100
-    assert server["repository"]["url"] == "https://github.com/koten-ai/zeus_dev_helper_mcp"
+    assert server["repository"]["url"] == "https://github.com/Koten-ai-org/zeus_dev_helper_mcp"
     assert server["repository"]["source"] == "github"
     pkg = server["packages"][0]
     assert pkg["registryType"] == "pypi"

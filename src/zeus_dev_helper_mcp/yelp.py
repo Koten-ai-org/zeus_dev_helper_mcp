@@ -1,4 +1,4 @@
-"""LocalAI yelp-demo template: locate or shallow-clone koten-ai/demo_yelp.
+"""LocalAI yelp-demo template: locate or shallow-clone Koten-ai-org/demo_yelp.
 
 Same coach shape as travel (find, else clone, set an env var). The git checkout
 is the app. This module does not write a BFF and does not rewrite Docker packaging.
@@ -14,7 +14,7 @@ from typing import Any
 
 from zeus_dev_helper_mcp.config import HelperConfig
 
-YELP_REPO = "https://github.com/koten-ai/demo_yelp"
+YELP_REPO = "https://github.com/Koten-ai-org/demo_yelp"
 YELP_REPO_GIT = f"{YELP_REPO}.git"
 DEFAULT_YELP_DIR_NAME = "demo_yelp"
 ENV_YELP_DIR = "DEMO_YELP_SAMPLE_DIR"

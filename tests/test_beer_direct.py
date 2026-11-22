@@ -50,7 +50,7 @@ def test_use_sample_beer_writes_tree(tmp_path: Path) -> None:
         assert "python main.py" not in action
     else:
         assert "python main.py" in action
-    assert "https://github.com/koten-ai/demo_beer_sample" in action
+    assert "https://github.com/Koten-ai-org/demo_beer_sample" in action
     root = Path(out["local_dir"])
     assert root.name == "demo_beer_sample"
     assert (root / "main.py").is_file()

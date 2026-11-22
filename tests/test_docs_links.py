@@ -28,7 +28,7 @@ def test_docs_url_maps_zeus_client_hub_and_pages() -> None:
 
 def test_docs_url_yaml_stays_on_github_source() -> None:
     url = docs_url("agent-index.yaml")
-    assert url.startswith("https://github.com/koten-ai/koten_docs/blob/")
+    assert url.startswith("https://github.com/Koten-ai-org/koten_docs/blob/")
     assert url.endswith("/agent-index.yaml")
     assert "docs.koten.ai" not in url
 

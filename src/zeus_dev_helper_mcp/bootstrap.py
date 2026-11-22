@@ -147,7 +147,7 @@ def bootstrap_scope(
             "contracts": (
                 docs_url("zeus-client/contracts-and-catalog.md")
             ),
-            "templates": "https://github.com/koten-ai/zeus_chat_request",
+            "templates": "https://github.com/Koten-ai-org/zeus_chat_request",
         },
     }
 

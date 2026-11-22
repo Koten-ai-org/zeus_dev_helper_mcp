@@ -15,7 +15,7 @@ from typing import Any
 
 from zeus_dev_helper_mcp.config import HelperConfig
 
-_CLIENT_GIT = "git+ssh://git@github.com/koten-ai/zeus_client_python.git@0.3.1-alpha"
+_CLIENT_GIT = "git+ssh://git@github.com/Koten-ai-org/zeus_client_python.git@0.3.1-alpha"
 _CLIENT_PIN = f"kotenai-zeus-client @ {_CLIENT_GIT}"
 _FILE_DEP = "file:../zeus_client_python"
 

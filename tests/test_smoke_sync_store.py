@@ -42,7 +42,7 @@ def _template(root: Path, *, catalogs: list[dict] | None) -> Path:
         manifest = {
             "profile": "v2_min",
             "schema_version": 2,
-            "repo": "koten-ai/zeus_chat_request",
+            "repo": "Koten-ai-org/zeus_chat_request",
             "catalogs": catalogs,
         }
     (root / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
@@ -61,6 +61,31 @@ def _min_template(root: Path) -> None:
         ),
         encoding="utf-8",
     )
+
+
+@pytest.mark.parametrize(
+    "repo",
+    [
+        "Koten-ai-org/zeus_chat_request",
+        "koten-ai-org/zeus_chat_request",
+        "  KOTEN-AI/zeus_chat_request  ",
+    ],
+)
+def test_repo_slug_alone_marks_the_template(tmp_path: Path, repo: str) -> None:
+    root = tmp_path / "zeus_chat_request"
+    root.mkdir()
+    (root / "manifest.json").write_text(json.dumps({"repo": repo}), encoding="utf-8")
+    assert is_template_repo(root) is True
+
+
+def test_other_repo_slug_is_not_the_template(tmp_path: Path) -> None:
+    root = tmp_path / "other"
+    root.mkdir()
+    (root / "manifest.json").write_text(
+        json.dumps({"repo": "Koten-ai-org/demo_beer_sample"}),
+        encoding="utf-8",
+    )
+    assert is_template_repo(root) is False
 
 
 def test_sync_index_without_v2_min_is_not_a_template(tmp_path: Path) -> None:

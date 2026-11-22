@@ -13,7 +13,7 @@ from zeus_dev_helper_mcp.config import HelperConfig
 from zeus_dev_helper_mcp.docs_links import docs_url
 from zeus_dev_helper_mcp.python_runtime import launch_note, venv_setup_shell
 
-TRAVEL_REPO = "https://github.com/koten-ai/demo_travel_sample"
+TRAVEL_REPO = "https://github.com/Koten-ai-org/demo_travel_sample"
 TRAVEL_REPO_GIT = f"{TRAVEL_REPO}.git"
 DEFAULT_TRAVEL_DIR_NAME = "demo_travel_sample"
 ENV_TRAVEL_DIR = "DEMO_TRAVEL_SAMPLE_DIR"
@@ -832,7 +832,7 @@ def travel_golden_path(
     env_path = (ensured.get("env") or {}).get(ENV_TRAVEL_DIR)
     helper_readme_section = f"""## Use with Developer Helper MCP
 
-1. Install [zeus_dev_helper_mcp](https://github.com/koten-ai/zeus_dev_helper_mcp).
+1. Install [zeus_dev_helper_mcp](https://github.com/Koten-ai-org/zeus_dev_helper_mcp).
 2. `use_sample` clones this public repo when needed and sets `DEMO_TRAVEL_SAMPLE_DIR`.
 3. `export DEMO_TRAVEL_SAMPLE_DIR={env_path or "/path/to/this/repo"}` in your shell for new processes.
 4. `export ZEUS_URL=http://localhost:8080` and scope env from this sample's docs.
@@ -892,7 +892,7 @@ def travel_golden_path(
         "docs": {
             "using_client": docs_url("zeus-client/using-zeus-client.md"),
             "helper": docs_url("zeus-client/dev-helper-mcp.md"),
-            "demo_builder": "https://github.com/koten-ai/zeus_client_python/tree/main/docs/demo-builder",
+            "demo_builder": "https://github.com/Koten-ai-org/zeus_client_python/tree/main/docs/demo-builder",
             "repo": TRAVEL_REPO,
         },
         "jira": "https://kotenai.atlassian.net/browse/ZDH-10",

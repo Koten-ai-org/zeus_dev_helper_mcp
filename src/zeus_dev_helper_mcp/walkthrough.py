@@ -89,7 +89,7 @@ def _yelp_use_sample_hint() -> dict[str, str]:
         "sample": "demo_yelp",
         "project_name": "demo_yelp",
         "note": (
-            "Use the LocalAI template: clone https://github.com/koten-ai/demo_yelp. "
+            "Use the LocalAI template: clone https://github.com/Koten-ai-org/demo_yelp. "
             "When parent_dir is set, create the clone there instead of binding "
             "a checkout outside that directory. "
             "The checkout is the app. Run both processes: "
@@ -219,7 +219,7 @@ def enriched_next_step(cfg: HelperConfig) -> dict[str, Any]:
         base["recommended_tools"] = _keep_enabled(["use_sample"])
         base["note"] = (
             "Recorded beer sample directory is not on disk. "
-            "use_sample(sample=beer) clones https://github.com/koten-ai/demo_beer_sample. "
+            "use_sample(sample=beer) clones https://github.com/Koten-ai-org/demo_beer_sample. "
             "Start it with python main.py."
         )
         base["result_shapes"] = dict(RESULT_SHAPES)
@@ -237,7 +237,7 @@ def enriched_next_step(cfg: HelperConfig) -> dict[str, Any]:
         base["use_sample_args_hint"] = _yelp_use_sample_hint()
         base["note"] = (
             "The LocalAI template is not bound. use_sample(sample=demo_yelp) locates or "
-            "clones https://github.com/koten-ai/demo_yelp and sets DEMO_YELP_SAMPLE_DIR."
+            "clones https://github.com/Koten-ai-org/demo_yelp and sets DEMO_YELP_SAMPLE_DIR."
         )
         base["recommended_tools"] = _keep_enabled(["use_sample"])
         if _process_login_missing(cfg):
@@ -251,7 +251,7 @@ def enriched_next_step(cfg: HelperConfig) -> dict[str, Any]:
         base["local_dir"] = str(recorded) if recorded is not None else ""
         base["note"] = (
             f"The app is the LocalAI template at {recorded} "
-            "(https://github.com/koten-ai/demo_yelp). "
+            "(https://github.com/Koten-ai-org/demo_yelp). "
             f"Run both processes: {_QUICK_START}. "
             "website_green starts python -m local_guide and checks GET /api/health. "
             "It is the template. "
@@ -274,7 +274,7 @@ def enriched_next_step(cfg: HelperConfig) -> dict[str, Any]:
         base["use_sample_args_hint"] = {
             "sample": "beer",
             "project_name": "demo_beer_sample",
-            "note": "Beer catalog UI. Clones https://github.com/koten-ai/demo_beer_sample. When that checkout has both a Dockerfile and a compose file, ask the user to choose Python or Docker before starting. Otherwise start with python main.py. Lists are Direct find and get. Pour is rt.agent.run_turn with chat_request omitted and stays off until an LLM key is in the app .env. Do not clone travel. Do not write a job for this one-scope page.",
+            "note": "Beer catalog UI. Clones https://github.com/Koten-ai-org/demo_beer_sample. When that checkout has both a Dockerfile and a compose file, ask the user to choose Python or Docker before starting. Otherwise start with python main.py. Lists are Direct find and get. Pour is rt.agent.run_turn with chat_request omitted and stays off until an LLM key is in the app .env. Do not clone travel. Do not write a job for this one-scope page.",
         }
     elif sample == "beer" and item_id in ("5.1", "5.2", "6.1"):
         if _website_green_failed(cfg):
@@ -304,7 +304,7 @@ def enriched_next_step(cfg: HelperConfig) -> dict[str, Any]:
             tools = ["website_green"]
             base["note"] = (
                 "The travel sample is the demo_travel_sample checkout "
-                "(https://github.com/koten-ai/demo_travel_sample). "
+                "(https://github.com/Koten-ai-org/demo_travel_sample). "
                 "When that directory has both a Dockerfile and a compose file, ask the user "
                 "to choose Python or Docker and pass serve_with to website_green. "
                 'Otherwise website_green installs with pip install -e ".[dev]", '
